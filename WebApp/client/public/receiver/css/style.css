@@ -1,8 +1,10 @@
 body {
   margin: 0px;
+  padding: 0px;
 }
 
 #player {
+  height: 100%; /* elliot: height: 100%; */
   position: relative;
   top: 0;
   right: 0;

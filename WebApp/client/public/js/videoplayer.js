@@ -14,7 +14,7 @@ export class VideoPlayer {
 
   /**
  * @param {Element} playerElement parent element for create video player
- * @param {HTMLInputElement} lockMouseCheck use checked propety for lock mouse 
+ * @param {HTMLInputElement} lockMouseCheck use checked propety for lock mouse
  */
   createPlayer(playerElement, lockMouseCheck) {
     this.playerElement = playerElement;
@@ -29,14 +29,14 @@ export class VideoPlayer {
     this.playerElement.appendChild(this.videoElement);
 
     // add fullscreen button
-    this.fullScreenButtonElement = document.createElement('img');
-    this.fullScreenButtonElement.id = 'fullscreenButton';
-    this.fullScreenButtonElement.src = '../images/FullScreen.png';
-    this.fullScreenButtonElement.addEventListener("click", this._onClickFullscreenButton.bind(this));
-    this.playerElement.appendChild(this.fullScreenButtonElement);
+    // this.fullScreenButtonElement = document.createElement('img');
+    // this.fullScreenButtonElement.id = 'fullscreenButton';
+    // this.fullScreenButtonElement.src = '../images/FullScreen.png';
+    // this.fullScreenButtonElement.addEventListener("click", this._onClickFullscreenButton.bind(this));
+    // this.playerElement.appendChild(this.fullScreenButtonElement);
 
-    document.addEventListener('webkitfullscreenchange', this._onFullscreenChange.bind(this));
-    document.addEventListener('fullscreenchange', this._onFullscreenChange.bind(this));
+    // document.addEventListener('webkitfullscreenchange', this._onFullscreenChange.bind(this));
+    // document.addEventListener('fullscreenchange', this._onFullscreenChange.bind(this));
     this.videoElement.addEventListener("click", this._mouseClick.bind(this), false);
   }
 
@@ -119,7 +119,7 @@ export class VideoPlayer {
   }
 
   /**
-   * @param {MediaStreamTrack} track 
+   * @param {MediaStreamTrack} track
    */
   addTrack(track) {
     if (!this.videoElement.srcObject) {
@@ -189,7 +189,7 @@ export class VideoPlayer {
 
   /**
    * setup datachannel for player input (muouse/keyboard/touch/gamepad)
-   * @param {RTCDataChannel} channel 
+   * @param {RTCDataChannel} channel
    */
   setupInput(channel) {
     this.sender = new Sender(this.videoElement);

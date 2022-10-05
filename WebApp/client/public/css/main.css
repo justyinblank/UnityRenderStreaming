@@ -30,10 +30,18 @@ section:last-child {
   padding: 0;
 }
 
-div#container {
+/* div#container {
   margin: 0 auto 0 auto;
   max-width: 60em;
   padding: 1em 1.5em 1.3em 1.5em;
+} */
+
+/* elliot: reset container style */
+div#container {
+  margin: 0 ;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
